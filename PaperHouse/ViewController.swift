@@ -24,9 +24,17 @@ class ViewController: UIViewController,MAMapViewDelegate {
         //显示地图
         let mapView = MAMapView(frame: self.view.bounds)
         mapView.delegate = self
-        
         mapView.isShowsUserLocation = true
         mapView.userTrackingMode = MAUserTrackingMode.follow
+        
+        let representation = MAUserLocationRepresentation()
+        representation.showsAccuracyRing = false
+        representation.showsHeadingIndicator = true
+        representation.fillColor = UIColor.red
+        representation.strokeColor = UIColor.blue
+        representation.lineWidth = 2
+        representation.image = UIImage(named:"Location")
+        mapView.update(representation)
         self.view.addSubview(mapView)
     }
 }

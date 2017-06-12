@@ -4,5 +4,5 @@ use_frameworks!
 target ‘PaperHouse’ do
     pod 'RongCloudIM/IMLib', '~> 2.8.3'
     pod 'RongCloudIM/IMKit', '~> 2.8.3'
-    pod 'AMap2DMap-NO-IDFA'
+    pod 'AMap3DMap-NO-IDFA'
 end
