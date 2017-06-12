@@ -1,0 +1,18 @@
+PODS:
+  - AliyunOSSiOS (2.6.0)
+  - RongCloudIM/IMKit (2.8.8):
+    - RongCloudIM/IMLib
+  - RongCloudIM/IMLib (2.8.8)
+
+DEPENDENCIES:
+  - AliyunOSSiOS (~> 2.6.0)
+  - RongCloudIM/IMKit (~> 2.8.3)
+  - RongCloudIM/IMLib (~> 2.8.3)
+
+SPEC CHECKSUMS:
+  AliyunOSSiOS: '058b038cc82000dadb8f8e3893a97243124f2898'
+  RongCloudIM: bf728368e7bb0740eab72a175a9f8f4cc52e23b9
+
+PODFILE CHECKSUM: d7510c42dc6751f86e8b6571316183b5c108ec6e
+
+COCOAPODS: 1.2.1
