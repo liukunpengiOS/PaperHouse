@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eB2-bk-6N9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eB2-bk-6N9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,32 +19,7 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="z5d-f7-8Mh">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                            </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycY-uc-pD5">
-                                <rect key="frame" x="157.5" y="589" width="60" height="60"/>
-                                <color key="backgroundColor" red="0.19851718257849549" green="0.28178742328686146" blue="0.51517578124999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="2v7-Hz-gji"/>
-                                    <constraint firstAttribute="height" constant="60" id="uFs-bC-zlk"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="写">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="ycY-uc-pD5" firstAttribute="top" secondItem="z5d-f7-8Mh" secondAttribute="bottom" constant="-78" id="9lh-BF-9Io"/>
-                            <constraint firstItem="z5d-f7-8Mh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HpP-MW-SmX"/>
-                            <constraint firstItem="z5d-f7-8Mh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="XvM-pn-t5a"/>
-                            <constraint firstAttribute="trailing" secondItem="z5d-f7-8Mh" secondAttribute="trailing" id="jLT-OT-Igb"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="z5d-f7-8Mh" secondAttribute="bottom" id="k6L-zV-iQE"/>
-                            <constraint firstItem="ycY-uc-pD5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lGM-Io-gkS"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="纸片屋" id="hFj-LB-P0q">
                         <barButtonItem key="leftBarButtonItem" title="设置" id="b9A-xk-KPi">

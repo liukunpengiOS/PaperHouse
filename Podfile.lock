@@ -1,18 +1,21 @@
 PODS:
-  - AliyunOSSiOS (2.6.0)
-  - RongCloudIM/IMKit (2.8.8):
+  - AMap2DMap-NO-IDFA (4.6.0):
+    - AMapFoundation-NO-IDFA (~> 1.3)
+  - AMapFoundation-NO-IDFA (1.4.0)
+  - RongCloudIM/IMKit (2.8.12):
     - RongCloudIM/IMLib
-  - RongCloudIM/IMLib (2.8.8)
+  - RongCloudIM/IMLib (2.8.12)
 
 DEPENDENCIES:
-  - AliyunOSSiOS (~> 2.6.0)
+  - AMap2DMap-NO-IDFA
   - RongCloudIM/IMKit (~> 2.8.3)
   - RongCloudIM/IMLib (~> 2.8.3)
 
 SPEC CHECKSUMS:
-  AliyunOSSiOS: '058b038cc82000dadb8f8e3893a97243124f2898'
-  RongCloudIM: bf728368e7bb0740eab72a175a9f8f4cc52e23b9
+  AMap2DMap-NO-IDFA: 01c80e7e93568617b1b1b452cfec71f974f5bc8a
+  AMapFoundation-NO-IDFA: d1ba541a56737c2048115a745b1dfcbe9901c248
+  RongCloudIM: 13599772038afa20dc62aff70c620b9305e6ac96
 
-PODFILE CHECKSUM: d7510c42dc6751f86e8b6571316183b5c108ec6e
+PODFILE CHECKSUM: dfb78e3cbadd457c458b20ebb067a883dd0ed2ac
 
 COCOAPODS: 1.2.1

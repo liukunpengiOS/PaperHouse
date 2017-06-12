@@ -8,18 +8,26 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,MAMapViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        configAMap()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func configAMap() {
+        
+        //配置地图
+        AMapServices.shared().apiKey = "2ba78a45598f61481a5f9f6239452cc8"
+        AMapServices.shared().enableHTTPS = true
+        //显示地图
+        let mapView = MAMapView(frame: self.view.bounds)
+        mapView.delegate = self
+        
+        mapView.isShowsUserLocation = true
+        mapView.userTrackingMode = MAUserTrackingMode.follow
+        self.view.addSubview(mapView)
     }
-
-
 }
 
