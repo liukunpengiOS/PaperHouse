@@ -9,7 +9,7 @@
 import UIKit
 
 let userAnnotationIdentifer = "UserAnnotationIdentifer" //用户大头针复用标识
-
+let pointAnnotationIdentifier = "PointAnnotationIdentifier" //poi标注复用标识
 class ViewController: UIViewController {
     
     var mapView: MAMapView!
@@ -19,12 +19,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         configMAMapView()
+        configAnnotations()
         configLocationButton()
     }
     
-  private  func configMAMapView() {
+    private  func configMAMapView() {
     
-        //显示地图
         let mapRect = CGRect(x: 0, y: 64, width: view.bounds.size.width,
                                           height: view.bounds.size.height - 64)
         mapView = MAMapView(frame: mapRect)
@@ -35,6 +35,15 @@ class ViewController: UIViewController {
         mapView.showsUserLocation = true
         mapView.userTrackingMode = .follow
         view.addSubview(mapView)
+    }
+    
+    private func configAnnotations () {
+     
+        let pointAnnotation = MAPointAnnotation()
+        pointAnnotation.coordinate = CLLocationCoordinate2DMake(30.5134675245796, 114.392693)
+        pointAnnotation.title = "标题1"
+        pointAnnotation.subtitle = "副标题"
+        mapView.addAnnotation(pointAnnotation)
     }
     
     private  func configLocationButton () {
@@ -84,6 +93,14 @@ extension ViewController: MAMapViewDelegate {
             userView?.image = UIImage(named: "userPosition")
             return userView
         }
+        if annotation is MAPointAnnotation {
+            var pointView = mapView.dequeueReusableAnnotationView(withIdentifier: pointAnnotationIdentifier)
+            if pointView == nil {
+                pointView = MAAnnotationView(annotation: annotation,reuseIdentifier:pointAnnotationIdentifier)
+            }
+            pointView?.image = UIImage(named: "car")
+            return pointView
+        }
         return nil
     }
 }
@@ -113,28 +130,4 @@ extension MAAnnotationView {
         self.layer.add(rotateAnimation, forKey: nil)
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
