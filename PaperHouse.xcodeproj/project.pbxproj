@@ -12,7 +12,6 @@
 		2ADD24CE1EE98E7E00489F8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ADD24CC1EE98E7E00489F8D /* Main.storyboard */; };
 		2ADD24D01EE98E7E00489F8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ADD24CF1EE98E7E00489F8D /* Assets.xcassets */; };
 		2ADD24D31EE98E7E00489F8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ADD24D11EE98E7E00489F8D /* LaunchScreen.storyboard */; };
-		2AE10EFE1EEED1EE00C5A964 /* Location.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AE10EFD1EEED1EE00C5A964 /* Location.png */; };
 		E2F5930C747FA3DAAB7DE6E5 /* Pods_PaperHouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99125B0E030924E34D8DB195 /* Pods_PaperHouse.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,7 +23,6 @@
 		2ADD24CF1EE98E7E00489F8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2ADD24D21EE98E7E00489F8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2ADD24D41EE98E7E00489F8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2AE10EFD1EEED1EE00C5A964 /* Location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Location.png; path = ../Location.png; sourceTree = "<group>"; };
 		99125B0E030924E34D8DB195 /* Pods_PaperHouse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaperHouse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C7F83A45DEF76A2BEA3D15B /* Pods-PaperHouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperHouse.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaperHouse/Pods-PaperHouse.release.xcconfig"; sourceTree = "<group>"; };
 		BAD61CD11EEE5CAB005B2272 /* PaperHouse-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PaperHouse-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -55,7 +53,7 @@
 		2ADD24BC1EE98E7E00489F8D = {
 			isa = PBXGroup;
 			children = (
-				2AE10EFD1EEED1EE00C5A964 /* Location.png */,
+				BAFBC53F1EEFAC4100F23E4F /* Reourses */,
 				2ADD24C71EE98E7E00489F8D /* PaperHouse */,
 				2ADD24C61EE98E7E00489F8D /* Products */,
 				267A14103D9D74C0424145BB /* Pods */,
@@ -91,6 +89,13 @@
 				99125B0E030924E34D8DB195 /* Pods_PaperHouse.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BAFBC53F1EEFAC4100F23E4F /* Reourses */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Reourses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,7 +162,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AE10EFE1EEED1EE00C5A964 /* Location.png in Resources */,
 				2ADD24D31EE98E7E00489F8D /* LaunchScreen.storyboard in Resources */,
 				2ADD24D01EE98E7E00489F8D /* Assets.xcassets in Resources */,
 				2ADD24CE1EE98E7E00489F8D /* Main.storyboard in Resources */,
