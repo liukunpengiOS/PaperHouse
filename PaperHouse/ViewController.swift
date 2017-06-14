@@ -23,13 +23,11 @@ class ViewController: UIViewController {
     }
     
   private  func configMAMapView() {
-    
-        //显示地图
         let mapRect = CGRect(x: 0, y: 64, width: view.bounds.size.width,
                                           height: view.bounds.size.height - 64)
         mapView = MAMapView(frame: mapRect)
         mapView.delegate = self
-        mapView.zoomLevel = 18
+        mapView.setZoomLevel(17.5, animated: true)
         mapView.showsScale = false
         mapView.showsCompass = false
         mapView.showsUserLocation = true
