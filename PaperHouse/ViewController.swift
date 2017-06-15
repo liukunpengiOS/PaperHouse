@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         configMAMapView()
-        configAnnotations()
+        configPointAnnotations()
         configLocationButton()
     }
     
@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         view.addSubview(mapView)
     }
     
-    private func configAnnotations () {
+    private func configPointAnnotations () {
      
         let pointAnnotation = MAPointAnnotation()
         pointAnnotation.coordinate = CLLocationCoordinate2DMake(30.5134675245796, 114.392693)
@@ -107,7 +107,6 @@ extension ViewController: MAMapViewDelegate {
 
 //MAAnnotationView扩展
 extension MAAnnotationView {
-    
     //根据heading信息旋转大头针视图
     //Parameter headding: 方向信息
     func rotateWithHeading (heading: CLHeading) {
