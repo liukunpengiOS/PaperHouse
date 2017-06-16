@@ -9,16 +9,15 @@
 import Foundation
 import Alamofire
 
-class PHAnnotations {
+class PHAnnotation {
     
+    //构造方法
     init() {
         
     }
     
-    //析构函数
     deinit {
-        
+        //析构函数 dealloc 自动调用
     }
-    
-    
+
 }

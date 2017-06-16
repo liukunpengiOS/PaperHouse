@@ -14,7 +14,7 @@
 		2ADD24D31EE98E7E00489F8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ADD24D11EE98E7E00489F8D /* LaunchScreen.storyboard */; };
 		BA41ED751EF2789D00BCBB63 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA41ED741EF2789D00BCBB63 /* Alamofire.framework */; };
 		BA41ED761EF2789D00BCBB63 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BA41ED741EF2789D00BCBB63 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BA41ED7A1EF27B3900BCBB63 /* PHAnnotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA41ED791EF27B3900BCBB63 /* PHAnnotations.swift */; };
+		BA41ED7A1EF27B3900BCBB63 /* PHAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA41ED791EF27B3900BCBB63 /* PHAnnotation.swift */; };
 		E2F5930C747FA3DAAB7DE6E5 /* Pods_PaperHouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99125B0E030924E34D8DB195 /* Pods_PaperHouse.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +43,7 @@
 		99125B0E030924E34D8DB195 /* Pods_PaperHouse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaperHouse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C7F83A45DEF76A2BEA3D15B /* Pods-PaperHouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperHouse.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaperHouse/Pods-PaperHouse.release.xcconfig"; sourceTree = "<group>"; };
 		BA41ED741EF2789D00BCBB63 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA41ED791EF27B3900BCBB63 /* PHAnnotations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHAnnotations.swift; sourceTree = "<group>"; };
+		BA41ED791EF27B3900BCBB63 /* PHAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHAnnotation.swift; sourceTree = "<group>"; };
 		BAD61CD11EEE5CAB005B2272 /* PaperHouse-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PaperHouse-Bridging-Header.h"; sourceTree = "<group>"; };
 		DD034FF36C041BA04200D384 /* Pods-PaperHouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperHouse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PaperHouse/Pods-PaperHouse.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,7 +95,7 @@
 			children = (
 				2ADD24C81EE98E7E00489F8D /* AppDelegate.swift */,
 				2ADD24CA1EE98E7E00489F8D /* ViewController.swift */,
-				BA41ED791EF27B3900BCBB63 /* PHAnnotations.swift */,
+				BA41ED791EF27B3900BCBB63 /* PHAnnotation.swift */,
 				2ADD24CC1EE98E7E00489F8D /* Main.storyboard */,
 				2ADD24CF1EE98E7E00489F8D /* Assets.xcassets */,
 				2ADD24D11EE98E7E00489F8D /* LaunchScreen.storyboard */,
@@ -256,7 +256,7 @@
 			files = (
 				2ADD24CB1EE98E7E00489F8D /* ViewController.swift in Sources */,
 				2ADD24C91EE98E7E00489F8D /* AppDelegate.swift in Sources */,
-				BA41ED7A1EF27B3900BCBB63 /* PHAnnotations.swift in Sources */,
+				BA41ED7A1EF27B3900BCBB63 /* PHAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
