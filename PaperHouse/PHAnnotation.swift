@@ -19,5 +19,5 @@ class PHAnnotation {
     deinit {
         //析构函数 dealloc 自动调用
     }
-
+    
 }
