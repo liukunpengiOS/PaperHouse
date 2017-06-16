@@ -10,29 +10,35 @@ import UIKit
 
 let userAnnotationIdentifer = "UserAnnotationIdentifer" //用户大头针复用标识
 let pointAnnotationIdentifier = "PointAnnotationIdentifier" //poi标注复用标识
+
 class ViewController: UIViewController {
     
     var mapView: MAMapView!
     var locationButton: UIButton!
+    var createPaperButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configMAMapView()
-        configPointAnnotations()
-        configLocationButton()
-        
-        let annotation = PHAnnotation()
-        annotation.getAnnotationsFormServer()
+        configElements()
     }
     
-    private  func configMAMapView() {
+    //MARK: Config Elements
+    private func configElements () {
+        
+        configMAMapView()
+        configLocationButton()
+        configPointAnnotations()
+        configCreatePaperButton()
+    }
+    
+    private func configMAMapView() {
         
         let mapRect = CGRect(x: 0, y: 64, width: view.bounds.size.width,
                                           height: view.bounds.size.height - 64)
         mapView = MAMapView(frame: mapRect)
         mapView.delegate = self
-        mapView.setZoomLevel(17.5, animated: true)
+        mapView.zoomLevel = 12.5
         mapView.showsScale = false
         mapView.showsCompass = false
         mapView.showsUserLocation = true
@@ -41,17 +47,14 @@ class ViewController: UIViewController {
     }
     
     private func configPointAnnotations () {
-     
-        let pointAnnotation = MAPointAnnotation()
-        pointAnnotation.coordinate = CLLocationCoordinate2DMake(30.5134675245796, 114.392693)
-        pointAnnotation.title = "标题1"
-        pointAnnotation.subtitle = "副标题"
-        mapView.addAnnotation(pointAnnotation)
+        
+        let annotations = PHAnnotation.getAnnotationsFormServer()
+        mapView.addAnnotations(annotations)
     }
     
-    private  func configLocationButton () {
+    private func configLocationButton () {
         
-        locationButton = UIButton(frame: CGRect(x: 8, y: view.bounds.height - 68, width: 60, height: 60))
+        locationButton = UIButton(frame: CGRect(x: 8, y: 68, width: 60, height: 60))
         locationButton.autoresizingMask = [UIViewAutoresizing.flexibleRightMargin, UIViewAutoresizing.flexibleTopMargin]
         locationButton.addTarget(self, action: #selector(actionLocation(sender:)), for: .touchUpInside)
         locationButton.setImage(UIImage(named:"nav_orientation"), for: .normal)
@@ -59,6 +62,25 @@ class ViewController: UIViewController {
         view.addSubview(locationButton)
     }
     
+    private func configCreatePaperButton () {
+        
+        createPaperButton = UIButton(type: .system)
+        createPaperButton.addTarget(self, action: #selector(createPaperAction(sender:)), for: .touchUpInside)
+        createPaperButton.setTitle("写", for: .normal)
+        createPaperButton.titleLabel?.font = UIFont.systemFont(ofSize: 20)
+        createPaperButton.backgroundColor = UIColor.purple
+        createPaperButton.setTitleColor(UIColor.white, for: .normal)
+        view.addSubview(createPaperButton)
+        
+        createPaperButton.mas_makeConstraints { (make) in
+            
+            make?.bottom.offset()(-10)
+            make?.left.offset()((SCREEN_WIDTH - 50)/2)
+            make?.width.height().offset()(50)
+        }
+    }
+    
+    //MARK:Actions
     @objc func actionLocation (sender: UIButton?) {
         
         if mapView.userTrackingMode == MAUserTrackingMode.follow {
@@ -69,8 +91,13 @@ class ViewController: UIViewController {
             mapView.setUserTrackingMode(MAUserTrackingMode.follow, animated: true)
         }
     }
+    
+    @objc func createPaperAction (sender: UIButton?) {
+        
+    }
 }
 
+//MARK: Extensions
 extension ViewController: MAMapViewDelegate {
     //用户位置更新时
     func mapView(_ mapView: MAMapView!, didUpdate userLocation: MAUserLocation!, updatingLocation: Bool) {
@@ -105,6 +132,20 @@ extension ViewController: MAMapViewDelegate {
             return pointView
         }
         return nil
+    }
+    
+    func mapView(_ mapView: MAMapView!, didSelect view: MAAnnotationView!) {
+        
+        let bounceKeyFrameAnimation = CAKeyframeAnimation();
+        bounceKeyFrameAnimation.keyPath = "position";
+        bounceKeyFrameAnimation.duration = 0.5;
+//        bounceKeyFrameAnimation.values = [YXEasing.calculateFrame(from: CGPoint(x:10,y:10),
+//                                                                 to: CGPoint(x:20,y:20),
+//                                                                 func: QuarticEaseInOut(0),
+//                                                                 frameCount: 0.5 * 30)]
+        
+//        _shareView.center = CGPointMake(CGRectGetWidth(_shareView.frame)/2,Y);
+//        [_shareView.layer addAnimation:bounceKeyFrameAmation forKey:nil];
     }
 }
 

@@ -14,6 +14,7 @@
 		2ADD24D31EE98E7E00489F8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ADD24D11EE98E7E00489F8D /* LaunchScreen.storyboard */; };
 		2AE3EDD61EF37CA5007CED0E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE3EDD51EF37CA5007CED0E /* Alamofire.framework */; };
 		2AE3EDD71EF37CA5007CED0E /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE3EDD51EF37CA5007CED0E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2AF8321D1EF3D63000E4BDA3 /* PHMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF8321C1EF3D63000E4BDA3 /* PHMacro.swift */; };
 		BA41ED7A1EF27B3900BCBB63 /* PHAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA41ED791EF27B3900BCBB63 /* PHAnnotation.swift */; };
 		E2F5930C747FA3DAAB7DE6E5 /* Pods_PaperHouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99125B0E030924E34D8DB195 /* Pods_PaperHouse.framework */; };
 /* End PBXBuildFile section */
@@ -41,6 +42,11 @@
 		2ADD24D21EE98E7E00489F8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2ADD24D41EE98E7E00489F8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AE3EDD51EF37CA5007CED0E /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AF8321C1EF3D63000E4BDA3 /* PHMacro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHMacro.swift; sourceTree = "<group>"; };
+		2AF8321F1EF3DA8B00E4BDA3 /* easing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = easing.h; sourceTree = "<group>"; };
+		2AF832201EF3DA8B00E4BDA3 /* YXEasing.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YXEasing.m; sourceTree = "<group>"; };
+		2AF832211EF3DA8B00E4BDA3 /* easing.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = easing.c; sourceTree = "<group>"; };
+		2AF832221EF3DA8B00E4BDA3 /* YXEasing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YXEasing.h; sourceTree = "<group>"; };
 		99125B0E030924E34D8DB195 /* Pods_PaperHouse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaperHouse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C7F83A45DEF76A2BEA3D15B /* Pods-PaperHouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperHouse.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaperHouse/Pods-PaperHouse.release.xcconfig"; sourceTree = "<group>"; };
 		BA41ED791EF27B3900BCBB63 /* PHAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHAnnotation.swift; sourceTree = "<group>"; };
@@ -73,7 +79,6 @@
 		2ADD24BC1EE98E7E00489F8D = {
 			isa = PBXGroup;
 			children = (
-				2AE3EDD51EF37CA5007CED0E /* Alamofire.framework */,
 				BA6116D41EF0DEB900B25D60 /* Unite */,
 				BAFBC53F1EEFAC4100F23E4F /* Reourses */,
 				2ADD24C71EE98E7E00489F8D /* PaperHouse */,
@@ -97,6 +102,7 @@
 				2ADD24C81EE98E7E00489F8D /* AppDelegate.swift */,
 				2ADD24CA1EE98E7E00489F8D /* ViewController.swift */,
 				BA41ED791EF27B3900BCBB63 /* PHAnnotation.swift */,
+				2AF8321C1EF3D63000E4BDA3 /* PHMacro.swift */,
 				2ADD24CC1EE98E7E00489F8D /* Main.storyboard */,
 				2ADD24CF1EE98E7E00489F8D /* Assets.xcassets */,
 				2ADD24D11EE98E7E00489F8D /* LaunchScreen.storyboard */,
@@ -104,6 +110,17 @@
 				BAD61CD11EEE5CAB005B2272 /* PaperHouse-Bridging-Header.h */,
 			);
 			path = PaperHouse;
+			sourceTree = "<group>";
+		};
+		2AF8321E1EF3DA8B00E4BDA3 /* YXEasing */ = {
+			isa = PBXGroup;
+			children = (
+				2AF8321F1EF3DA8B00E4BDA3 /* easing.h */,
+				2AF832201EF3DA8B00E4BDA3 /* YXEasing.m */,
+				2AF832211EF3DA8B00E4BDA3 /* easing.c */,
+				2AF832221EF3DA8B00E4BDA3 /* YXEasing.h */,
+			);
+			path = YXEasing;
 			sourceTree = "<group>";
 		};
 		B00936D43A7B61869DCB6EE5 /* Frameworks */ = {
@@ -117,6 +134,8 @@
 		BA6116D41EF0DEB900B25D60 /* Unite */ = {
 			isa = PBXGroup;
 			children = (
+				2AF8321E1EF3DA8B00E4BDA3 /* YXEasing */,
+				2AE3EDD51EF37CA5007CED0E /* Alamofire.framework */,
 			);
 			path = Unite;
 			sourceTree = "<group>";
@@ -256,6 +275,7 @@
 			files = (
 				2ADD24CB1EE98E7E00489F8D /* ViewController.swift in Sources */,
 				2ADD24C91EE98E7E00489F8D /* AppDelegate.swift in Sources */,
+				2AF8321D1EF3D63000E4BDA3 /* PHMacro.swift in Sources */,
 				BA41ED7A1EF27B3900BCBB63 /* PHAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
