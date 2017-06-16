@@ -12,9 +12,9 @@
 		2ADD24CE1EE98E7E00489F8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ADD24CC1EE98E7E00489F8D /* Main.storyboard */; };
 		2ADD24D01EE98E7E00489F8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ADD24CF1EE98E7E00489F8D /* Assets.xcassets */; };
 		2ADD24D31EE98E7E00489F8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ADD24D11EE98E7E00489F8D /* LaunchScreen.storyboard */; };
+		2AE3EDD61EF37CA5007CED0E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE3EDD51EF37CA5007CED0E /* Alamofire.framework */; };
+		2AE3EDD71EF37CA5007CED0E /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE3EDD51EF37CA5007CED0E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BA41ED7A1EF27B3900BCBB63 /* PHAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA41ED791EF27B3900BCBB63 /* PHAnnotation.swift */; };
-		BA41ED7D1EF3646200BCBB63 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA41ED7C1EF3646200BCBB63 /* Alamofire.framework */; };
-		BA41ED7E1EF3646200BCBB63 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BA41ED7C1EF3646200BCBB63 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E2F5930C747FA3DAAB7DE6E5 /* Pods_PaperHouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99125B0E030924E34D8DB195 /* Pods_PaperHouse.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +25,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BA41ED7E1EF3646200BCBB63 /* Alamofire.framework in Embed Frameworks */,
+				2AE3EDD71EF37CA5007CED0E /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -40,10 +40,10 @@
 		2ADD24CF1EE98E7E00489F8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2ADD24D21EE98E7E00489F8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2ADD24D41EE98E7E00489F8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AE3EDD51EF37CA5007CED0E /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99125B0E030924E34D8DB195 /* Pods_PaperHouse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaperHouse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C7F83A45DEF76A2BEA3D15B /* Pods-PaperHouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperHouse.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaperHouse/Pods-PaperHouse.release.xcconfig"; sourceTree = "<group>"; };
 		BA41ED791EF27B3900BCBB63 /* PHAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHAnnotation.swift; sourceTree = "<group>"; };
-		BA41ED7C1EF3646200BCBB63 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD61CD11EEE5CAB005B2272 /* PaperHouse-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PaperHouse-Bridging-Header.h"; sourceTree = "<group>"; };
 		DD034FF36C041BA04200D384 /* Pods-PaperHouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperHouse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PaperHouse/Pods-PaperHouse.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -54,7 +54,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2F5930C747FA3DAAB7DE6E5 /* Pods_PaperHouse.framework in Frameworks */,
-				BA41ED7D1EF3646200BCBB63 /* Alamofire.framework in Frameworks */,
+				2AE3EDD61EF37CA5007CED0E /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,7 +73,7 @@
 		2ADD24BC1EE98E7E00489F8D = {
 			isa = PBXGroup;
 			children = (
-				BA41ED7C1EF3646200BCBB63 /* Alamofire.framework */,
+				2AE3EDD51EF37CA5007CED0E /* Alamofire.framework */,
 				BA6116D41EF0DEB900B25D60 /* Unite */,
 				BAFBC53F1EEFAC4100F23E4F /* Reourses */,
 				2ADD24C71EE98E7E00489F8D /* PaperHouse */,
@@ -397,6 +397,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3BEH3R543L;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Unite",
+				);
 				INFOPLIST_FILE = PaperHouse/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -420,6 +424,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3BEH3R543L;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Unite",
+				);
 				INFOPLIST_FILE = PaperHouse/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

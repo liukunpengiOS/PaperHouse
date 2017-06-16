@@ -21,6 +21,9 @@ class ViewController: UIViewController {
         configMAMapView()
         configPointAnnotations()
         configLocationButton()
+        
+        let annotation = PHAnnotation()
+        annotation.getAnnotationsFormServer()
     }
     
     private  func configMAMapView() {

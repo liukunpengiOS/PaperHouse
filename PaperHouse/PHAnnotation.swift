@@ -7,17 +7,19 @@
 //
 
 import Foundation
-import Alamofire
 
 class PHAnnotation {
-    
     //构造方法
     init() {
         
     }
     
-    deinit {
-        //析构函数 dealloc 自动调用
+  public func getAnnotationsFormServer(){
+        
+//        Alamofire.request("https://api.500px.com/v1/photos", method: .get).responseJSON {
+//            response in
+//            guard let JSON = response.result.value else { return }
+//            print("JSON: \(JSON)")
+//        }
     }
-    
 }
