@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     var mapView: MAMapView!
     var locationButton: UIButton!
-    var createPaperButton: UIButton!
+    var paperButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,20 +64,17 @@ class ViewController: UIViewController {
     
     private func configCreatePaperButton () {
         
-        createPaperButton = UIButton(type: .system)
-        createPaperButton.addTarget(self, action: #selector(createPaperAction(sender:)), for: .touchUpInside)
-        createPaperButton.setTitle("写", for: .normal)
-        createPaperButton.titleLabel?.font = UIFont.systemFont(ofSize: 20)
-        createPaperButton.backgroundColor = UIColor.purple
-        createPaperButton.setTitleColor(UIColor.white, for: .normal)
-        view.addSubview(createPaperButton)
-        
-        createPaperButton.mas_makeConstraints { (make) in
-            
-            make?.bottom.offset()(-10)
-            make?.left.offset()((SCREEN_WIDTH - 50)/2)
-            make?.width.height().offset()(50)
-        }
+        let size = CGSize(width: 50, height: 50)
+        let center = CGPoint(x:(SCREEN_WIDTH - 50)/2 + 25,y:(SCREEN_HEIGHT - 35))
+        paperButton = UIButton(type: .system)
+        paperButton.frame.size = size
+        paperButton.center = center
+        paperButton.addTarget(self, action: #selector(createPaperAction(sender:)), for: .touchUpInside)
+        paperButton.setTitle("写", for: .normal)
+        paperButton.titleLabel?.font = UIFont.systemFont(ofSize: 20)
+        paperButton.backgroundColor = UIColor.purple
+        paperButton.setTitleColor(UIColor.white, for: .normal)
+        view.addSubview(paperButton)
     }
     
     //MARK:Actions
@@ -136,16 +133,15 @@ extension ViewController: MAMapViewDelegate {
     
     func mapView(_ mapView: MAMapView!, didSelect view: MAAnnotationView!) {
         
-        let bounceKeyFrameAnimation = CAKeyframeAnimation();
-        bounceKeyFrameAnimation.keyPath = "position";
-        bounceKeyFrameAnimation.duration = 0.5;
-//        bounceKeyFrameAnimation.values = [YXEasing.calculateFrame(from: CGPoint(x:10,y:10),
-//                                                                 to: CGPoint(x:20,y:20),
-//                                                                 func: QuarticEaseInOut(0),
-//                                                                 frameCount: 0.5 * 30)]
-        
-//        _shareView.center = CGPointMake(CGRectGetWidth(_shareView.frame)/2,Y);
-//        [_shareView.layer addAnimation:bounceKeyFrameAmation forKey:nil];
+        let duration = 0.6
+        let easingValue          = EasingValue(withFunction: EasingFunction.circularEaseOut, frameCount: Int(duration * 30.0))
+        let keyAnimation         = CAKeyframeAnimation(keyPath: "position")
+        keyAnimation.duration    = duration
+        keyAnimation.values      = easingValue.pointValueWith(fromPoint: CGPoint(x:(SCREEN_WIDTH - 50)/2 + 25,
+                                                                                 y:(SCREEN_HEIGHT - 35)),
+                                                              toPoint: CGPoint(x:35,y:(SCREEN_HEIGHT - 35)))
+        paperButton.center = CGPoint(x:35,y:(SCREEN_HEIGHT - 35))
+        paperButton.layer.add(keyAnimation, forKey: nil)
     }
 }
 

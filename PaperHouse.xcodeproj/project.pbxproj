@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A00C4301EF639CA00A11391 /* PHEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A00C42F1EF639CA00A11391 /* PHEasing.swift */; };
+		2A00C4321EF639F500A11391 /* PHEasingValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A00C4311EF639F500A11391 /* PHEasingValue.swift */; };
+		2A00C4341EF63A1800A11391 /* PHComplexEasingValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A00C4331EF63A1800A11391 /* PHComplexEasingValue.swift */; };
 		2ADD24C91EE98E7E00489F8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD24C81EE98E7E00489F8D /* AppDelegate.swift */; };
 		2ADD24CB1EE98E7E00489F8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD24CA1EE98E7E00489F8D /* ViewController.swift */; };
 		2ADD24CE1EE98E7E00489F8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ADD24CC1EE98E7E00489F8D /* Main.storyboard */; };
@@ -34,6 +37,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2A00C42F1EF639CA00A11391 /* PHEasing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHEasing.swift; sourceTree = "<group>"; };
+		2A00C4311EF639F500A11391 /* PHEasingValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHEasingValue.swift; sourceTree = "<group>"; };
+		2A00C4331EF63A1800A11391 /* PHComplexEasingValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHComplexEasingValue.swift; sourceTree = "<group>"; };
 		2ADD24C51EE98E7E00489F8D /* PaperHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaperHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ADD24C81EE98E7E00489F8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2ADD24CA1EE98E7E00489F8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,10 +49,6 @@
 		2ADD24D41EE98E7E00489F8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AE3EDD51EF37CA5007CED0E /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AF8321C1EF3D63000E4BDA3 /* PHMacro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHMacro.swift; sourceTree = "<group>"; };
-		2AF8321F1EF3DA8B00E4BDA3 /* easing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = easing.h; sourceTree = "<group>"; };
-		2AF832201EF3DA8B00E4BDA3 /* YXEasing.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YXEasing.m; sourceTree = "<group>"; };
-		2AF832211EF3DA8B00E4BDA3 /* easing.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = easing.c; sourceTree = "<group>"; };
-		2AF832221EF3DA8B00E4BDA3 /* YXEasing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YXEasing.h; sourceTree = "<group>"; };
 		99125B0E030924E34D8DB195 /* Pods_PaperHouse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaperHouse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C7F83A45DEF76A2BEA3D15B /* Pods-PaperHouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperHouse.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaperHouse/Pods-PaperHouse.release.xcconfig"; sourceTree = "<group>"; };
 		BA41ED791EF27B3900BCBB63 /* PHAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHAnnotation.swift; sourceTree = "<group>"; };
@@ -112,15 +114,14 @@
 			path = PaperHouse;
 			sourceTree = "<group>";
 		};
-		2AF8321E1EF3DA8B00E4BDA3 /* YXEasing */ = {
+		2AF832231EF62C7900E4BDA3 /* Easing */ = {
 			isa = PBXGroup;
 			children = (
-				2AF8321F1EF3DA8B00E4BDA3 /* easing.h */,
-				2AF832201EF3DA8B00E4BDA3 /* YXEasing.m */,
-				2AF832211EF3DA8B00E4BDA3 /* easing.c */,
-				2AF832221EF3DA8B00E4BDA3 /* YXEasing.h */,
+				2A00C42F1EF639CA00A11391 /* PHEasing.swift */,
+				2A00C4311EF639F500A11391 /* PHEasingValue.swift */,
+				2A00C4331EF63A1800A11391 /* PHComplexEasingValue.swift */,
 			);
-			path = YXEasing;
+			path = Easing;
 			sourceTree = "<group>";
 		};
 		B00936D43A7B61869DCB6EE5 /* Frameworks */ = {
@@ -134,7 +135,7 @@
 		BA6116D41EF0DEB900B25D60 /* Unite */ = {
 			isa = PBXGroup;
 			children = (
-				2AF8321E1EF3DA8B00E4BDA3 /* YXEasing */,
+				2AF832231EF62C7900E4BDA3 /* Easing */,
 				2AE3EDD51EF37CA5007CED0E /* Alamofire.framework */,
 			);
 			path = Unite;
@@ -273,8 +274,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A00C4301EF639CA00A11391 /* PHEasing.swift in Sources */,
 				2ADD24CB1EE98E7E00489F8D /* ViewController.swift in Sources */,
+				2A00C4321EF639F500A11391 /* PHEasingValue.swift in Sources */,
 				2ADD24C91EE98E7E00489F8D /* AppDelegate.swift in Sources */,
+				2A00C4341EF63A1800A11391 /* PHComplexEasingValue.swift in Sources */,
 				2AF8321D1EF3D63000E4BDA3 /* PHMacro.swift in Sources */,
 				BA41ED7A1EF27B3900BCBB63 /* PHAnnotation.swift in Sources */,
 			);
