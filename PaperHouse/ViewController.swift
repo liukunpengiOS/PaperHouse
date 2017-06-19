@@ -14,12 +14,17 @@ let pointAnnotationIdentifier = "PointAnnotationIdentifier" //poi标注复用标
 class ViewController: UIViewController {
     
     var mapView: MAMapView!
+    var paperPreview: UIView!
     var locationButton: UIButton!
     var paperButton: UIButton!
+    var fromPoint: CGPoint!
+    var toPoint: CGPoint!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+    super.viewDidLoad()
         
+        fromPoint = CGPoint(x:(SCREEN_WIDTH - 50)/2 + 25,y:(SCREEN_HEIGHT - 35))
+        toPoint = CGPoint(x:35,y:(SCREEN_HEIGHT - 35))
         configElements()
     }
     
@@ -29,7 +34,8 @@ class ViewController: UIViewController {
         configMAMapView()
         configLocationButton()
         configPointAnnotations()
-        configCreatePaperButton()
+        configPaperButton()
+        configPaperPreview()
     }
     
     private func configMAMapView() {
@@ -62,7 +68,7 @@ class ViewController: UIViewController {
         view.addSubview(locationButton)
     }
     
-    private func configCreatePaperButton () {
+    private func configPaperButton () {
         
         let size = CGSize(width: 50, height: 50)
         let center = CGPoint(x:(SCREEN_WIDTH - 50)/2 + 25,y:(SCREEN_HEIGHT - 35))
@@ -75,6 +81,15 @@ class ViewController: UIViewController {
         paperButton.backgroundColor = UIColor.purple
         paperButton.setTitleColor(UIColor.white, for: .normal)
         view.addSubview(paperButton)
+    }
+    
+    private func configPaperPreview() {
+        
+        let frame = CGRect(x: 70, y: SCREEN_HEIGHT - 90, width: SCREEN_WIDTH - 80, height: 80)
+        paperPreview = UIView(frame: frame)
+        paperPreview.alpha = 0
+        paperPreview.backgroundColor = UIColor.purple
+        view.addSubview(paperPreview)
     }
     
     //MARK:Actions
@@ -96,6 +111,7 @@ class ViewController: UIViewController {
 
 //MARK: Extensions
 extension ViewController: MAMapViewDelegate {
+    
     //用户位置更新时
     func mapView(_ mapView: MAMapView!, didUpdate userLocation: MAUserLocation!, updatingLocation: Bool) {
         //获取大头针视图
@@ -131,16 +147,26 @@ extension ViewController: MAMapViewDelegate {
         return nil
     }
     
+    func mapView(_ mapView: MAMapView!, didSingleTappedAt coordinate: CLLocationCoordinate2D) {
+        
+        paperButtonAnimation(fromPoint: toPoint, toPoint: fromPoint)
+        PHAnimation.animation.hidderTransformAnimation(view: paperPreview)
+    }
+    
     func mapView(_ mapView: MAMapView!, didSelect view: MAAnnotationView!) {
         
-        let duration = 0.6
-        let easingValue          = EasingValue(withFunction: EasingFunction.circularEaseOut, frameCount: Int(duration * 30.0))
+        paperButtonAnimation(fromPoint: fromPoint, toPoint: toPoint)
+        PHAnimation.animation.showTransformAnimation(view: paperPreview)
+    }
+    
+    func paperButtonAnimation(fromPoint: CGPoint,toPoint: CGPoint) {
+        
+        let duration = 0.25
+        let easingValue          = EasingValue(withFunction: EasingFunction.sineEaseInOut, frameCount: Int(duration * 30.0))
         let keyAnimation         = CAKeyframeAnimation(keyPath: "position")
         keyAnimation.duration    = duration
-        keyAnimation.values      = easingValue.pointValueWith(fromPoint: CGPoint(x:(SCREEN_WIDTH - 50)/2 + 25,
-                                                                                 y:(SCREEN_HEIGHT - 35)),
-                                                              toPoint: CGPoint(x:35,y:(SCREEN_HEIGHT - 35)))
-        paperButton.center = CGPoint(x:35,y:(SCREEN_HEIGHT - 35))
+        keyAnimation.values      = easingValue.pointValueWith(fromPoint: fromPoint, toPoint: toPoint)
+        paperButton.center = toPoint
         paperButton.layer.add(keyAnimation, forKey: nil)
     }
 }
