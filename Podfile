@@ -6,5 +6,6 @@ target ‘PaperHouse’ do
     pod 'RongCloudIM/IMKit', '~> 2.8.3'
     pod 'AMap3DMap-NO-IDFA'
     pod 'Masonry'
+    pod 'SwiftHEXColors'
     #pod 'Alamofire', '~> 4.4'
 end
