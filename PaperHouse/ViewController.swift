@@ -14,7 +14,7 @@ let pointAnnotationIdentifier = "PointAnnotationIdentifier" //poi标注复用标
 class ViewController: UIViewController {
     
     var mapView: MAMapView!
-    var paperPreview: UIView!
+    var paperPreview: PHPaperPreview!
     var locationButton: UIButton!
     var paperButton: UIButton!
     var fromPoint: CGPoint!
@@ -70,7 +70,7 @@ class ViewController: UIViewController {
     
     private func configPaperButton () {
         
-        let size = CGSize(width: 50, height: 50)
+        let size = CGSize(width: 60, height: 60)
         let center = CGPoint(x:(SCREEN_WIDTH - 50)/2 + 25,y:(SCREEN_HEIGHT - 35))
         paperButton = UIButton(type: .system)
         paperButton.frame.size = size
@@ -85,8 +85,8 @@ class ViewController: UIViewController {
     
     private func configPaperPreview() {
         
-        let frame = CGRect(x: 70, y: SCREEN_HEIGHT - 90, width: SCREEN_WIDTH - 80, height: 80)
-        paperPreview = UIView(frame: frame)
+        let frame = CGRect(x: 70, y: SCREEN_HEIGHT - 65, width: SCREEN_WIDTH - 75, height: 60)
+        paperPreview = PHPaperPreview(frame: frame)
         paperPreview.alpha = 0
         paperPreview.backgroundColor = UIColor.purple
         view.addSubview(paperPreview)

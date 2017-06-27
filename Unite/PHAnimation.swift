@@ -18,10 +18,11 @@ class PHAnimation {
         
         UIView.animate(withDuration: 0.3,animations: {
                         
-            view.transform = CGAffineTransform.init(scaleX: 0.0, y: 0.0)
+            view.transform = CGAffineTransform.init(scaleX: 0.2, y: 0.2)
         }) { (completion) in
             
             UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseInOut, animations: {
+                
                  view.alpha = 1
                  view.transform = CGAffineTransform.init(scaleX: 1, y: 1)
             }, completion: nil)

@@ -44,6 +44,7 @@
 		2A00C4331EF63A1800A11391 /* PHComplexEasingValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHComplexEasingValue.swift; sourceTree = "<group>"; };
 		2A2CE9E01EF7655B000BA085 /* PHAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHAnimation.swift; sourceTree = "<group>"; };
 		2A2CE9E21EF76D5D000BA085 /* PHPaperPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHPaperPreview.swift; sourceTree = "<group>"; };
+		2A355FDD1EFA648400F6AC19 /* PaperHouse.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaperHouse.pch; sourceTree = "<group>"; };
 		2ADD24C51EE98E7E00489F8D /* PaperHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaperHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ADD24C81EE98E7E00489F8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2ADD24CA1EE98E7E00489F8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +123,7 @@
 				2ADD24CF1EE98E7E00489F8D /* Assets.xcassets */,
 				2ADD24D11EE98E7E00489F8D /* LaunchScreen.storyboard */,
 				2ADD24D41EE98E7E00489F8D /* Info.plist */,
+				2A355FDD1EFA648400F6AC19 /* PaperHouse.pch */,
 				BAD61CD11EEE5CAB005B2272 /* PaperHouse-Bridging-Header.h */,
 			);
 			path = PaperHouse;
@@ -148,8 +150,8 @@
 		BA6116D41EF0DEB900B25D60 /* Unite */ = {
 			isa = PBXGroup;
 			children = (
-				2AF832231EF62C7900E4BDA3 /* Easing */,
 				2A2CE9E01EF7655B000BA085 /* PHAnimation.swift */,
+				2AF832231EF62C7900E4BDA3 /* Easing */,
 			);
 			path = Unite;
 			sourceTree = "<group>";
@@ -352,6 +354,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PaperHouse/PaperHouse.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -407,6 +411,8 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PaperHouse/PaperHouse.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

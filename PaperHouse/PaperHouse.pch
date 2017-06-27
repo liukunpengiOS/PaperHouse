@@ -1,0 +1,15 @@
+//
+//  PaperHouse.pch
+//  PaperHouse
+//
+//  Created by kunpeng on 2017/6/21.
+//  Copyright © 2017年 liukunpeng. All rights reserved.
+//
+
+#ifndef PaperHouse_pch
+#define PaperHouse_pch
+
+#define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
+
+#endif /* PaperHouse_pch */
