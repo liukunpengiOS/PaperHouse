@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.5.0)
   - AMap3DMap-NO-IDFA (5.2.1):
     - AMapFoundation-NO-IDFA (~> 1.3)
   - AMapFoundation-NO-IDFA (1.4.0)
@@ -9,6 +10,7 @@ PODS:
   - SwiftHEXColors (1.1.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.4)
   - AMap3DMap-NO-IDFA
   - Masonry
   - RongCloudIM/IMKit (~> 2.8.3)
@@ -16,12 +18,13 @@ DEPENDENCIES:
   - SwiftHEXColors
 
 SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   AMap3DMap-NO-IDFA: ce3c57a3e0bd65ae09040ce55055b2020ab47783
   AMapFoundation-NO-IDFA: d1ba541a56737c2048115a745b1dfcbe9901c248
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   RongCloudIM: bfaeb83dcfaf6b2039434f3692d328430de215c7
   SwiftHEXColors: 8f7e364df7929e32cff9f9eeb044bb215167d6be
 
-PODFILE CHECKSUM: a2ca0d377f1a23961f5cfb9fd018f478dcb850ef
+PODFILE CHECKSUM: c61447d86457c367f9d3d5440ee1f29ebfc0f12a
 
 COCOAPODS: 1.2.1

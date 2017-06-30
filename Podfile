@@ -7,5 +7,5 @@ target ‘PaperHouse’ do
     pod 'AMap3DMap-NO-IDFA'
     pod 'Masonry'
     pod 'SwiftHEXColors'
-    #pod 'Alamofire', '~> 4.4'
+    pod 'Alamofire', '~> 4.4'
 end
