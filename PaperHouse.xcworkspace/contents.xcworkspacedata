@@ -5,6 +5,9 @@
       location = "group:PaperHouse.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:TangramKit/TangramKit.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

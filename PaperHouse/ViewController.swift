@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TangramKit
 
 let userAnnotationIdentifer = "UserAnnotationIdentifer" //用户大头针复用标识
 let pointAnnotationIdentifier = "PointAnnotationIdentifier" //poi标注复用标识
@@ -23,13 +24,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
     super.viewDidLoad()
         
+        let S = TGLinearLayout(.vert)
+        S.tg_vspace = 10
+        S.tg_width.equal(100)
+        S.tg_height.equal(.wrap)
+        
         fromPoint = CGPoint(x:(SCREEN_WIDTH - 50)/2 + 25,y:(SCREEN_HEIGHT - 35))
         toPoint = CGPoint(x:35,y:(SCREEN_HEIGHT - 35))
         configElements()
     }
     
     //MARK: Config Elements
-    private func configElements () {
+     func configElements () {
         
         configMAMapView()
         configLocationButton()
@@ -38,7 +44,7 @@ class ViewController: UIViewController {
         configPaperPreview()
     }
     
-    private func configMAMapView() {
+     func configMAMapView() {
         
         let mapRect = CGRect(x: 0, y: 64, width: view.bounds.size.width,
                                           height: view.bounds.size.height - 64)
@@ -52,13 +58,13 @@ class ViewController: UIViewController {
         view.addSubview(mapView)
     }
     
-    private func configPointAnnotations () {
+     func configPointAnnotations () {
         
         let annotations = PHAnnotation.getAnnotationsFormServer()
         mapView.addAnnotations(annotations)
     }
     
-    private func configLocationButton () {
+     func configLocationButton () {
         
         locationButton = UIButton(frame: CGRect(x: 8, y: 68, width: 60, height: 60))
         locationButton.autoresizingMask = [UIViewAutoresizing.flexibleRightMargin, UIViewAutoresizing.flexibleTopMargin]
@@ -83,7 +89,7 @@ class ViewController: UIViewController {
         view.addSubview(paperButton)
     }
     
-    private func configPaperPreview() {
+     func configPaperPreview() {
         
         let frame = CGRect(x: 70, y: SCREEN_HEIGHT - 65, width: SCREEN_WIDTH - 75, height: 60)
         paperPreview = PHPaperPreview(frame: frame)

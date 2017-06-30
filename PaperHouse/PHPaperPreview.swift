@@ -27,7 +27,6 @@ class PHPaperPreview: UIView {
     
     override init(frame: CGRect) {
         super.init(frame:frame)
-        
         newFrame = frame
         configElements()
     }
@@ -36,7 +35,7 @@ class PHPaperPreview: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func configElements () {
+     func configElements () {
         
         configActorImv()
         configNameLabel()
@@ -52,7 +51,7 @@ class PHPaperPreview: UIView {
 
 extension PHPaperPreview {
     
-    private func configActorImv() {
+     func configActorImv() {
         
         let hegiht = newFrame.size.height - (padding * 2)
         actorImv = UIImageView()
@@ -66,7 +65,7 @@ extension PHPaperPreview {
         })
     }
     
-    private func configNameLabel() {
+     func configNameLabel() {
         
         nameLabel = UILabel()
         nameLabel?.text = "姓名"
@@ -94,7 +93,7 @@ extension PHPaperPreview {
         }
     }
     
-    private func configAgeLabel() {
+     func configAgeLabel() {
         
         ageLabel = UILabel()
         ageLabel?.text = "28"
@@ -108,7 +107,7 @@ extension PHPaperPreview {
         }
     }
     
-    private func configContentLabel() {
+     func configContentLabel() {
         
         contentLabel = UILabel()
         contentLabel?.text = "我是标题，爱咋咋地"
@@ -122,7 +121,7 @@ extension PHPaperPreview {
         }
     }
     
-    private func configTimeLabel(){
+     func configTimeLabel(){
         
         timeLabel = UILabel()
         timeLabel?.text = "26min"
@@ -136,7 +135,7 @@ extension PHPaperPreview {
         }
     }
     
-    private func configUnflodButton() {
+     func configUnflodButton() {
         
         let hegiht = newFrame.size.height - 2
         unflodButton = UIButton(type: .system)
